@@ -22,3 +22,5 @@ RUN set -ex \
     && rm -rf /tmp/nginx-modules
 
 ADD rootfs /
+
+ENV NGINX_ENTRYPOINT_WORKER_PROCESSES_AUTOTUNE=1

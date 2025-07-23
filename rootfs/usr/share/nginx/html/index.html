@@ -336,7 +336,7 @@
             height: 34px;
         }
     </style>
-    <title>{{server_name}}</title>
+    <title>t(server_name)</title>
 </head>
 
 <body>
@@ -345,7 +345,7 @@
     </div>
     <header class="page-header container">
         <a href="/" class="h1">
-            What is my ip address? - <small>{{server_name}}</small>
+            What is my ip address? - <small>t(server_name)</small>
         </a>
     </header>
     <nav class="container"></nav>
@@ -357,47 +357,47 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="col-sm-3">IP Address</div>
-                    <div class="col-sm-9">{{remote_addr}}</div>
+                    <div class="col-sm-9">t(remote_addr)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Remote Host</div>
-                    <div class="col-sm-9">{{remote_addr}}</div>
+                    <div class="col-sm-9">t(remote_addr)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Country Code</div>
-                    <div class="col-sm-9">{{geoip2_data_country_iso_code}}</div>
+                    <div class="col-sm-9">t(geoip2_data_country_iso_code)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">User Agent</div>
-                    <div class="col-sm-9">{{http_user_agent}}</div>
+                    <div class="col-sm-9">t(http_user_agent)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Port</div>
-                    <div class="col-sm-9">{{remote_port}}</div>
+                    <div class="col-sm-9">t(remote_port)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Language</div>
-                    <div class="col-sm-9">{{http_accept_language}}</div>
+                    <div class="col-sm-9">t(http_accept_language)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Referer</div>
-                    <div class="col-sm-9">{{http_referer}}</div>
+                    <div class="col-sm-9">t(http_referer)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Method</div>
-                    <div class="col-sm-9">{{request_method}}</div>
+                    <div class="col-sm-9">t(request_method)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">Encoding</div>
-                    <div class="col-sm-9">{{http_accept_encoding}}</div>
+                    <div class="col-sm-9">t(http_accept_encoding)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">MIME Type</div>
-                    <div class="col-sm-9">{{http_accept}}</div>
+                    <div class="col-sm-9">t(http_accept)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-3">X-Forwarded-For</div>
-                    <div class="col-sm-9">{{proxy_add_x_forwarded_for}}</div>
+                    <div class="col-sm-9">t(proxy_add_x_forwarded_for)</div>
                 </li>
             </ul>
         </div>
@@ -408,74 +408,74 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="col-sm-4" id="direct_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}</span></div>
-                    <div class="col-sm-8">{{remote_addr}}</div>
+                            class="copy_text">curl t(server_name)</span></div>
+                    <div class="col-sm-8">t(remote_addr)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="ip_curl"><span class="unselectable">$ </span><span class="copy_text">curl
-                            {{server_name}}/ip</span></div>
-                    <div class="col-sm-8">{{remote_addr}}</div>
+                            t(server_name)/ip</span></div>
+                    <div class="col-sm-8">t(remote_addr)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="host_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/host</span></div>
-                    <div class="col-sm-8">{{remote_addr}}</div>
+                            class="copy_text">curl t(server_name)/host</span></div>
+                    <div class="col-sm-8">t(remote_addr)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="country_code_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/country_code</span></div>
-                    <div class="col-sm-8">{{geoip2_data_country_iso_code}}</div>
+                            class="copy_text">curl t(server_name)/country_code</span></div>
+                    <div class="col-sm-8">t(geoip2_data_country_iso_code)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="ua_curl"><span class="unselectable">$ </span><span class="copy_text">curl
-                            {{server_name}}/ua</span></div>
-                    <div class="col-sm-8">{{http_user_agent}}</div>
+                            t(server_name)/ua</span></div>
+                    <div class="col-sm-8">t(http_user_agent)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="port_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/port</span></div>
-                    <div class="col-sm-8">{{remote_port}}</div>
+                            class="copy_text">curl t(server_name)/port</span></div>
+                    <div class="col-sm-8">t(remote_port)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="lang_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/lang</span></div>
-                    <div class="col-sm-8">{{http_accept_language}}/div>
+                            class="copy_text">curl t(server_name)/lang</span></div>
+                    <div class="col-sm-8">t(http_accept_language)/div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="encoding_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/encoding</span></div>
-                    <div class="col-sm-8">{{http_accept_encoding}}</div>
+                            class="copy_text">curl t(server_name)/encoding</span></div>
+                    <div class="col-sm-8">t(http_accept_encoding)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="mime_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/mime</span></div>
-                    <div class="col-sm-8">{{http_accept}}</div>
+                            class="copy_text">curl t(server_name)/mime</span></div>
+                    <div class="col-sm-8">t(http_accept)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="forwarded_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/forwarded</span></div>
-                    <div class="col-sm-8">{{proxy_add_forwarded}}</div>
+                            class="copy_text">curl t(server_name)/forwarded</span></div>
+                    <div class="col-sm-8">t(proxy_add_forwarded)</div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="all_curl"><span class="unselectable">$ </span><span class="copy_text">curl
-                            {{server_name}}/all</span></div>
+                            t(server_name)/all</span></div>
                     <div class="col-sm-8"></div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="all.json_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/all.json</span></div>
+                            class="copy_text">curl t(server_name)/all.json</span></div>
                     <div class="col-sm-8"></div>
                 </li>
                 <li class="list-group-item">
                     <div class="col-sm-4" id="all.js_curl"><span class="unselectable">$ </span><span
-                            class="copy_text">curl {{server_name}}/all.js</span></div>
+                            class="copy_text">curl t(server_name)/all.js</span></div>
                     <div class="col-sm-8"></div>
                 </li>
             </ul>
         </div>
     </main>
     <footer class="container text-center">
-        <p>&copy; 2014 - 2025 {{server_name}}</p>
+        <p>&copy; 2014 - 2025 t(server_name)</p>
     </footer>
     <script>
         function copyText(event) {
