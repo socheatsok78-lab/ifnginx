@@ -1,6 +1,6 @@
 target "default" {
   contexts = {
-    "nginx" = "target:nginx-builder"
+    "xnginx" = "target:nginx-builder"
   }
   tags = [ "scratchpad/nginx-geoip2" ]
 }
