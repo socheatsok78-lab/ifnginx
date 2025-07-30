@@ -7,6 +7,10 @@ target "default" {
     "github-metadata-action",
     "nginx",
   ]
+  platforms = [
+    "linux/amd64",
+    "linux/arm64",
+  ]
 }
 
 target "dev" {
