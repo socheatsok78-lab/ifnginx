@@ -1,0 +1,23 @@
+name: Docker
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docker:
+    uses: socheatsok78-lab/uses/.github/workflows/use-docker.yml@main
+    permissions:
+      contents: read
+      packages: write
+    with:
+      push: ${{ github.event_name != 'pull_request' }}
