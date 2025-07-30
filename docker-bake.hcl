@@ -19,7 +19,7 @@ target "dev" {
     "github-metadata-action",
     "nginx",
   ]
-  tags = [ "scratchpad/nginx-geoip2" ]
+  tags = [ "ghcr.io/socheatsok78-lab/ifnginx:develop" ]
 }
 
 target "nginx" {
