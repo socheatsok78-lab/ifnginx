@@ -1,8 +1,27 @@
+target "docker-metadata-action" {}
+target "github-metadata-action" {}
+
 target "default" {
+  inherits = [
+    "docker-metadata-action",
+    "github-metadata-action",
+    "nginx",
+  ]
+}
+
+target "dev" {
+  inherits = [
+    "docker-metadata-action",
+    "github-metadata-action",
+    "nginx",
+  ]
+  tags = [ "scratchpad/nginx-geoip2" ]
+}
+
+target "nginx" {
   contexts = {
     "xnginx" = "target:nginx-builder"
   }
-  tags = [ "scratchpad/nginx-geoip2" ]
 }
 
 target "nginx-builder" {
